@@ -1,0 +1,6 @@
+{
+  "name": "Walk/Jog Interval Timer",
+  "description": "Interval training timer for walk and jog workouts with background voice announcements, lock screen controls, and customizable presets.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
