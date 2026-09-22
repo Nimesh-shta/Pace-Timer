@@ -23,6 +23,20 @@ jobs:
       - name: Make Gradle executable
         run: chmod +x ./gradlew
 
+      - name: Create debug keystore
+        run: |
+          keytool -genkeypair \
+            -v \
+            -storetype PKCS12 \
+            -keystore debug.keystore \
+            -alias androiddebugkey \
+            -keyalg RSA \
+            -keysize 2048 \
+            -validity 10000 \
+            -storepass android \
+            -keypass android \
+            -dname "CN=Android Debug,O=Android,C=US"
+
       - name: Build APK
         run: ./gradlew assembleDebug
 
